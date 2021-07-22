@@ -17,7 +17,8 @@ function setTodo(e) {
 }
 
 function add(e) {
-    e.target.value = ''
+    if(todo == '' || todo == null)
+        return
     todos = [...todos, todo]
     todo = ''
     populateList()
@@ -30,4 +31,4 @@ function remove(id) {
     populateList()
 }
 
-window.onload = populateList()
+window.onload = document.getElementById('#todos').innerHTML = 'Todo list is empty'
