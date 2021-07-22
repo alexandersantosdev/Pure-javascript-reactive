@@ -6,67 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pure Java script - reactive system</title>
-    <style>
-        body {
-            background-color: blueviolet;
-            color: #fff;
-        }
-
-        .red {
-            color: #fff;
-            background-color: red;
-            border: none;
-            cursor: pointer;
-            height: 20px;
-        }   
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        li {
-            padding: 10px 0;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        #app {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .form {
-            display: flex;
-            align-items: center;
-        }
-
-        input {
-            border: none;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            width: 300px;
-            height: 40px;
-            padding-left: 10px;
-            font-size: 20px;
-        }
-
-        .add {
-            height: 42px;
-            background-color: fuchsia;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: rgb(224, 15, 224);
-        }
-    </style>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -81,42 +21,7 @@
         <ol id="todos"></ol>
     </div>
 
-    <script>
-
-        var todos = []
-        let todo = ''
-
-        function populateList() {
-            document.getElementById('todos').innerHTML = ''
-
-            let html = ''
-
-            for (l in todos)
-                html += `<li>${todos[l]} <button class="red" onclick="remove(${l})">X</button></li> `
-
-            document.getElementById('todos').innerHTML = html
-        }
-
-        function setTodo(e) {
-            todo = e.target.value
-        }
-
-        function add(e) {
-            e.target.value = ''
-            todos = [...todos, todo]
-            todo = ''
-            populateList()
-        }
-
-        function remove(id) {
-            console.log(id)
-            let filtered = todos.filter(l => l != todos[id])
-            todos = filtered
-            populateList()
-        }
-
-        window.onload = populateList()
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

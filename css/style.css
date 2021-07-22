@@ -1,0 +1,59 @@
+body {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.red {
+    color: #fff;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+}   
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li {
+    padding: 10px 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.add {
+    height: 42px;
+    background-color: fuchsia;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(224, 15, 224);
+}
