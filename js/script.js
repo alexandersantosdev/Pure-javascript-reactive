@@ -16,7 +16,7 @@ function setTodo(e) {
     todo = e.target.value
 }
 
-function add(e) {
+function add() {
     if(todo == '' || todo == null)
         return
     todos = [...todos, todo]
