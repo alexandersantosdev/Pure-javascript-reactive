@@ -25,10 +25,7 @@ function add(e) {
 }
 
 function remove(id) {
-    console.log(id)
     let filtered = todos.filter(l => l != todos[id])
     todos = filtered
     populateList()
 }
-
-window.onload = document.getElementById('#todos').innerHTML = 'Todo list is empty'
